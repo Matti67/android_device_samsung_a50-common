@@ -1,0 +1,25 @@
+diff --git a/sepolicy/vendor/file.te b/sepolicy/vendor/file.te
+index f60e4a9..ab4c4eb 100644
+--- a/sepolicy/vendor/file.te
++++ b/sepolicy/vendor/file.te
+@@ -1,6 +1,6 @@
+ # data types
+ type camera_vendor_data_file, file_type, data_file_type;
+-#type exynos_data_file, file_type, data_file_type;
++type exynos_data_file, file_type, data_file_type;
+ type media_vendor_data_file, file_type, data_file_type;
+ type mediadrm_vendor_data_file, file_type, data_file_type;
+ type nfc_vendor_data_file, file_type, data_file_type;
+diff --git a/sepolicy/vendor/file_contexts b/sepolicy/vendor/file_contexts
+index 99d24c8..93540d6 100644
+--- a/sepolicy/vendor/file_contexts
++++ b/sepolicy/vendor/file_contexts
+@@ -3,7 +3,7 @@
+ /data/vendor/media(/.*)?                     u:object_r:media_vendor_data_file:s0
+ /data/vendor/mediadrm(/.*)?                  u:object_r:mediadrm_vendor_data_file:s0
+ /data/camera(/.*)?                           u:object_r:camera_data_file:s0
+-#/data/exynos(/.*)?			     u:object_r:exynos_data_file:s0
++/data/exynos(/.*)?			     u:object_r:exynos_data_file:s0
+ /data/vendor/nfc(/.*)?                       u:object_r:nfc_vendor_data_file:s0
+ 
+ ## Devices
